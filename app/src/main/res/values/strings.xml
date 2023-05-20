@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Simple Todo Apps</string>
+    <string-array name="sample_task_list">
+        <item>洗濯物をする</item>
+        <item>部屋をする</item>
+        <item>住所変更をする</item>
+        <item>請求書の支払いをする</item>
+    </string-array>
 </resources>
