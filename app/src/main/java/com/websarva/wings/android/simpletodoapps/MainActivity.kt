@@ -2,8 +2,10 @@ package com.websarva.wings.android.simpletodoapps
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import com.websarva.wings.android.simpletodoapps.databinding.ActivityMainBinding
+import com.websarva.wings.android.simpletodoapps.fragment.TaskAddDialogFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -15,8 +17,13 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        binding.fab.setOnClickListener{
-            Toast.makeText(this@MainActivity,"fabクリック",Toast.LENGTH_SHORT).show()
+        val fabListener = FloatingActionButtonClickListener()
+        binding.fab.setOnClickListener(fabListener)
+    }
+
+    private inner class FloatingActionButtonClickListener : View.OnClickListener {
+        override fun onClick(view: View) {
+            TaskAddDialogFragment().show(supportFragmentManager,"TaskAddDialogFragment")
         }
     }
 }

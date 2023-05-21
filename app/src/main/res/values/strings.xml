@@ -6,4 +6,7 @@
         <item>住所変更をする</item>
         <item>請求書の支払いをする</item>
     </string-array>
+    <string name="add_task_dialog_title">タスクを追加する</string>
+    <string name="add_task_dialog_positive_button">追加</string>
+    <string name="add_task_dialog_negative_button">キャンセル</string>
 </resources>
